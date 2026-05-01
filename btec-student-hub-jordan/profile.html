@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الملف الشخصي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">BTEC Hub Jordan</h2>
+  <div class="nav-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="grades.html">الصفوف</a>
+    <a href="checker.html">المصحح</a>
+    <a href="assistant.html">المساعد</a>
+    <a href="profile.html">حسابي</a>
+
+    <span id="userName"></span>
+    <button onclick="logoutUser()" class="logout-btn">خروج</button>
+  </div>
+</nav>
+
+<section class="login-section">
+  <div class="profile-card">
+  <h2>حسابي</h2>
+
+  <div class="profile-avatar">👤</div>
+
+  <input id="editName" type="text" placeholder="اكتب اسمك">
+  <input id="editGrade" type="text" placeholder="اكتب صفك">
+
+  <button onclick="saveProfile()">حفظ البيانات</button>
+
+  <p><span class="label">اسم المستخدم:</span> <span id="profileName"></span></p>
+  <p><span class="label">الصف:</span> <span id="profileGrade"></span></p>
+  <p><span class="label">الحالة:</span> طالب BTEC</p>
+</div>
+
+<div class="progress-box">
+  <h3>تقدمي في الموقع</h3>
+
+  <div class="progress-bar">
+    <div id="progressFill"></div>
+  </div>
+
+  <p id="progressText">0%</p>
+
+  <button onclick="resetProgress()" class="reset-btn">تصفير التقدم</button>
+</div>
+
+<script src="script.js"></script>
+<script type="module" src="auth-guard.js"></script>
+
+<script>
+  function loadProfile() {
+    const name = localStorage.getItem("btecStudentName") || "";
+    const grade = localStorage.getItem("btecStudentGrade") || "";
+
+    document.getElementById("editName").value = name;
+    document.getElementById("editGrade").value = grade;
+
+    document.getElementById("profileName").textContent = name || "غير محدد";
+    document.getElementById("profileGrade").textContent = grade || "غير محدد";
+  }
+
+  function saveProfile() {
+    const name = document.getElementById("editName").value.trim();
+    const grade = document.getElementById("editGrade").value.trim();
+
+    localStorage.setItem("btecStudentName", name);
+    localStorage.setItem("btecStudentGrade", grade);
+
+    loadProfile();
+    alert("تم حفظ البيانات ✅");
+  }
+
+  function loadProgress() {
+    const progress = localStorage.getItem("btecProgress") || 0;
+
+    document.getElementById("progressFill").style.width = progress + "%";
+    document.getElementById("progressText").textContent = progress + "%";
+  }
+
+  function resetProgress() {
+    const items = [
+      "grade10-assignment1",
+      "grade10-assignment2",
+      "grade10-assignment3",
+      "grade10-assignment4",
+      "grade10-assignment5",
+      "grade11-apps",
+      "grade11-games",
+      "grade11-support",
+      "tawjihi-cyber",
+      "tawjihi-ai",
+      "tawjihi-programming",
+      "tawjihi-pm"
+    ];
+
+    items.forEach(item => localStorage.removeItem(item));
+
+    localStorage.setItem("btecProgress", 0);
+    loadProgress();
+
+    alert("تم تصفير التقدم 🔄");
+  }
+
+  loadProfile();
+  loadProgress();
+</script>

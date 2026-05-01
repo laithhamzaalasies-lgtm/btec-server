@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 1: Cyber Security</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">BTEC Hub Jordan</h2>
+  <div class="nav-links">
+  <a href="index.html">الرئيسية</a>
+  <a href="grades.html">الصفوف</a>
+  <a href="checker.html">المصحح</a>
+  <a href="assistant.html">المساعد</a>
+
+  <span id="userName"></span>
+  <button onclick="logoutUser()" class="logout-btn">خروج</button>
+</div>
+
+<section class="cards-section">
+  <h2>Assignment 4: Cyber Security Project</h2>
+  <p class="assistant-intro">اختر الملف أو حلّل تقريرك</p>
+
+  <div class="cards">
+
+    <div class="card" onclick="window.open('cyber-scenario.pdf')">
+      <h3>📄 ملف السيناريو</h3>
+      <p>اضغط لفتح السيناريو.</p>
+    </div>
+
+    <div class="card" onclick="window.open('cyber-explanation.pdf')">
+      <h3>📘 ملف الشرح</h3>
+      <p>اضغط لفتح الشرح.</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='checker.html'">
+      <h3>🤖 تحليل التقرير</h3>
+      <p>افحص تقريرك واحصل على تقييم.</p>
+    </div>
+
+  </div>
+</section>
+<script src="script.js"></script>
+<script>
+  markProgress("tawjihi-programming");
+</script>
+</body>
+</html>

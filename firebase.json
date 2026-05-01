@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "btec-student-hub-jordan",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

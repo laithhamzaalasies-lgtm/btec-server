@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المساعد</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="auth-guard.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">BTEC Hub Jordan</h2>
+
+  <div class="nav-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="grades.html">الصفوف</a>
+    <a href="checker.html">المصحح</a>
+    <a href="assistant.html">المساعد</a>
+    <a href="profile.html">حسابي</a>
+    <button onclick="logoutUser()" class="logout-btn">خروج</button>
+  </div>
+</nav>
+
+<section class="chat-section">
+  <h2>مساعد BTEC الذكي</h2>
+  <p class="assistant-intro">
+    اسألني عن الواجبات، التقارير، القوالب، أو معايير BTEC.
+  </p>
+
+  <div class="chat-box">
+    <div id="chatMessages" class="chat-messages">
+      <div class="message bot">
+        أهلاً فيك! أنا مساعد BTEC. اسألني: كيف أبدأ الواجب؟ أو شو يعني Distinction؟
+      </div>
+    </div>
+
+    <div class="quick-questions">
+      <button onclick="quickAsk('كيف أبدأ الواجب؟')">كيف أبدأ؟</button>
+      <button onclick="quickAsk('كيف أكتب مقدمة؟')">مقدمة</button>
+      <button onclick="quickAsk('كيف أعمل تحليل؟')">تحليل</button>
+      <button onclick="quickAsk('شو يعني Distinction؟')">Distinction</button>
+      <button onclick="quickAsk('شو أصعب واجبات BTEC؟')">أصعب واجبات</button>
+      <button onclick="quickAsk('قارن بين Pass و Merit و Distinction')">مستويات BTEC</button>
+    </div>
+
+    <div class="chat-input">
+      <input id="userInput" type="text" placeholder="اكتب سؤالك هنا..." />
+      <button onclick="sendMessage()">إرسال</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

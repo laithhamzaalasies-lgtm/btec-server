@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>التوجيهي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">BTEC Hub Jordan</h2>
+  <div class="nav-links">
+  <a href="index.html">الرئيسية</a>
+  <a href="grades.html">الصفوف</a>
+  <a href="checker.html">المصحح</a>
+  <a href="assistant.html">المساعد</a>
+
+  <span id="userName"></span>
+  <button onclick="logoutUser()" class="logout-btn">خروج</button>
+</div>
+
+<section class="cards-section">
+  <h2>التوجيهي</h2>
+  <p class="assistant-intro">اختر الواجب</p>
+
+  <div class="cards">
+
+    <div class="card" onclick="window.location.href='tawjihi-cyber.html'">
+      <h3>Assignment 1</h3>
+      <p>Cyber Security Project</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='tawjihi-ai.html'">
+      <h3>Assignment 2</h3>
+      <p>Artificial Intelligence Project</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='tawjihi-programming.html'">
+      <h3>Assignment 3</h3>
+      <p>Programming Project</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='tawjihi-pm.html'">
+      <h3>Assignment 4</h3>
+      <p>Project Management</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

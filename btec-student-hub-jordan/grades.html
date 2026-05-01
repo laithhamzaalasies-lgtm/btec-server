@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفوف</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav-links">
+  <a href="index.html">الرئيسية</a>
+  <a href="grades.html">الصفوف</a>
+  <a href="checker.html">المصحح</a>
+  <a href="assistant.html">المساعد</a>
+
+  <span id="userName"></span>
+  <button onclick="logoutUser()" class="logout-btn">خروج</button>
+</div>
+
+<section class="cards-section">
+  <h2>اختر صفك</h2>
+
+  <div class="cards">
+    <div class="card" onclick="window.location.href='grade10.html'">
+  <h3>الصف العاشر</h3>
+  <p>ابدأ من الصفر.</p>
+</div>
+
+    <div class="card" onclick="window.location.href='grade11.html'">
+  <h3>الأول ثانوي</h3>
+  <p>نماذج وخطوات تساعدك.</p>
+</div>
+
+    <div class="card" onclick="window.location.href='tawjihi.html'">
+  <h3>التوجيهي</h3>
+  <p>تنظيم أقوى للمشاريع والتقارير النهائية.</p>
+</div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>

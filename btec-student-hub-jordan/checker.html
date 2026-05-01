@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مصحح BTEC</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">BTEC Hub Jordan</h2>
+  <div class="nav-links">
+  <a href="index.html">الرئيسية</a>
+  <a href="grades.html">الصفوف</a>
+  <a href="checker.html">المصحح</a>
+  <a href="assistant.html">المساعد</a>
+
+  <span id="userName"></span>
+  <button onclick="logoutUser()" class="logout-btn">خروج</button>
+</div>
+
+<section class="checker-section">
+  <h2>مصحح تقارير BTEC</h2>
+  <p class="assistant-intro">
+    الصق تقريرك أو ارفع ملف PDF، وسيعطيك الموقع تقييمًا تدريبيًا ونصائح للتحسين.
+  </p>
+
+  <input type="file" id="pdfFile" accept=".pdf" />
+
+<button onclick="readPdfFile()">قراءة ملف PDF</button>
+
+<textarea id="reportInput" placeholder="أو الصق تقريرك هنا..."></textarea>
+
+<button onclick="analyzeReport()">حلّل التقرير</button>
+
+<div id="resultBox" class="result-box"></div>
+    النتيجة ستظهر هنا.
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
