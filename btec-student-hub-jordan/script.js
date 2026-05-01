@@ -197,7 +197,7 @@ chatBox.scrollTop = chatBox.scrollHeight; // 👈 هون
 input.value = "";
 
   try {
-    const response = await fetch("http://localhost:3000/chat", {
+    const response = await fetch("https://btec-server-ct7o.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
