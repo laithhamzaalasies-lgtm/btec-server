@@ -5,6 +5,7 @@
   <title>مصحح BTEC</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
@@ -26,13 +27,20 @@
     الصق تقريرك أو ارفع ملف PDF، وسيعطيك الموقع تقييمًا تدريبيًا ونصائح للتحسين.
   </p>
 
-  <input type="file" id="pdfFile" accept=".pdf" />
-
-<button onclick="readPdfFile()">قراءة ملف PDF</button>
+<div class="upload-box">
+  <label class="upload-btn">
+     اختر ملف PDF
+    <input type="file" id="pdfFile" accept=".pdf" onchange="readPdfFile()">
+  </label>
+</div>
 
 <textarea id="reportInput" placeholder="أو الصق تقريرك هنا..."></textarea>
 
-<button onclick="analyzeReport()">حلّل التقرير</button>
+<div class="analyze-btn-wrap">
+  <button id="analyzeBtn" onclick="analyzeReport()" class="main-btn">
+    حلّل التقرير
+  </button>
+</div>
 
 <div id="resultBox" class="result-box"></div>
     النتيجة ستظهر هنا.

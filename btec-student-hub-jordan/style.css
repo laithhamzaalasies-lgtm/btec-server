@@ -867,3 +867,70 @@ button,
 
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
+.upload-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.upload-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(56,189,248,0.4);
+}
+
+.upload-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(56,189,248,0.6);
+}
+
+.upload-btn input {
+  display: none;
+}
+.main-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(56,189,248,0.4);
+
+  display: block;
+  margin: 25px auto; /* بالنص */
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(56,189,248,0.6);
+}
+.analyze-btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.main-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(56,189,248,0.4);
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+}
